@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yashashvi Dethe | Data Engineer Portfolio</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+  header, section { padding: 40px 20px; max-width: 900px; margin: auto; }
+  header { background-color: #2c3e50; color: white; text-align: center; overflow: hidden; }
+  header img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px; opacity: 0; transform: scale(0.8); transition: all 0.8s ease; }
+  h1, header p { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+  h1 { margin: 10px 0; }
+  h2 { border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 40px; }
+  ul { list-style-type: square; padding-left: 20px; }
+  a.button { display: inline-block; padding: 10px 20px; background: #2980b9; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+  a.button:hover { background: #1f5f8b; }
+  footer { text-align: center; padding: 20px; background: #2c3e50; color: white; }/* Animation keyframes */ .show { opacity: 1 !important; transform: none !important; } </style>
+
+</head>
+<body><header>
+  <h1 id="name">Yashashvi Dethe</h1>
+  <img id="photo" src="IMG20250321161945.jpg" alt="Yashashvi Dethe">
+  <p id="role">Data Engineer</p>
+  <p id="welcome">Welcome to my professional portfolio website.</p>
+</header><section id="skills">
+  <h2>Skills</h2>
+  <ul id="skills-list">
+    <li>Cloud Platforms: GCP, Snowflake, AWS, Azure</li>
+    <li>ETL & Data Pipelines: Apache Airflow, Pentaho</li>
+    <li>Databases: PostgreSQL, MySQL, Snowflake</li>
+    <li>Programming: SQL, Python, PySpark, Scala, Java</li>
+    <li>DevOps & Tools: Git, JIRA</li>
+    <li>Strong Problem-Solving & Analytical Skills</li>
+  </ul>
+</section><section id="experience">
+  <h2>Experience</h2>
+  <h3>Data Engineer | Quantiphi Analytics Solutions, Mumbai</h3>
+  <p>Nov 2022 - Present</p>
+  <ul>
+    <li>Designed scalable data pipelines on GCP using BigQuery, Apache Airflow, and real-time processing tools.</li>
+    <li>Led data warehouse migration projects and optimized storage/query performance for analytics use-cases.</li>
+  </ul>  <h3>Data Analyst Intern | XYZ Corp</h3>
+  <p>Jun 2021 - Dec 2021</p>
+  <ul>
+    <li>Cleaned and analyzed datasets to derive business insights and improve reporting workflows.</li>
+  </ul>
+</section><section id="projects">
+  <h2>Projects</h2>  <h3>GCP BigQuery Analytics Dashboard</h3>
+  <p>Designed and deployed a real-time analytics dashboard leveraging Google BigQuery and Google Data Studio. Processed datasets exceeding 10 million rows, creating automated insights for marketing and sales departments. Optimized SQL queries for performance and integrated with Google Cloud Storage for scalable data ingestion pipelines.</p>  <h3>AWS Serverless Data Pipeline</h3>
+  <p>Developed a fully automated ETL pipeline utilizing AWS Lambda, S3, Glue, and Athena. Streamlined the ingestion and transformation of transactional data, reducing processing time by 60%. Implemented robust logging and monitoring with AWS CloudWatch, ensuring reliability and fault tolerance.</p>  <h3>GCP Vertex AI Forecasting Model</h3>
+  <p>Trained a time-series forecasting model on Vertex AI using TensorFlow, predicting demand patterns for inventory management. Deployed the model via Google Cloud Functions and exposed REST APIs for seamless integration with business dashboards. Achieved a 15% improvement in forecasting accuracy compared to legacy models.</p>  <h3>AWS SageMaker ML Deployment</h3>
+  <p>Built a classification model using AWS SageMaker, automating hyperparameter tuning and model evaluation. Deployed the model through API Gateway and Lambda for real-time inference. Implemented CI/CD pipelines with AWS CodePipeline for streamlined model updates and monitoring.</p>  <h3>GCP Dataflow Streaming Pipeline</h3>
+  <p>Constructed a real-time streaming pipeline using Apache Beam on Google Dataflow. Ingested data from Pub/Sub, performed transformations, and stored outputs in BigQuery and Cloud Storage. Enabled real-time dashboards and alerts, improving incident response time by 40%.</p>
+</section><section id="resume">
+  <h2>Resume</h2>
+  <a href="Resume_yashashvi_dethe.pdf" class="button" download>Download My Resume</a>
+</section><section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:yashashvidethe3108@gmail.com">yashashvidethe3108@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">linkedin.com/in/yashashvi-dethe-0927761a8</a></p>
+</section><footer>
+  &copy; 2025 Yashashvi Dethe | Data Engineer Portfolio
+</footer><script>
+  // Sequential pop-in animation
+  window.onload = function() {
+    const seq = [
+      document.getElementById('name'),
+      document.getElementById('photo'),
+      document.getElementById('role'),
+      document.getElementById('welcome'),
+      document.getElementById('skills-list')
+    ];
+
+    seq.forEach((el, i) => {
+      setTimeout(() => el.classList.add('show'), i * 600);
+    });
+  }
+</script></body>
+</html>
