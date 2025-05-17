@@ -19,7 +19,6 @@
       background-size: cover;
       padding: 80px 20px 60px 20px;
       text-align: center;
-      color: white;
     }
 
     header::before {
@@ -27,109 +26,61 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+      background-color: rgba(255, 255, 255, 0.7); /* white overlay to ensure black text is readable */
       z-index: 0;
     }
 
     header * {
       position: relative;
       z-index: 1;
+      color: black; /* Make all header text black */
     }
 
     header img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s ease;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    h1, header p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
     }
 
-    h1, h2 {
-      margin: 10px 0;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #2980b9;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    a.button:hover {
-      background: #1f5f8b;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
+    .show {
+      opacity: 1 !important;
+      transform: none !important;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe">
-    <h1>Yashashvi Dethe</h1>
-    <p>Data Engineer</p>
-    <p>Welcome to my professional portfolio website.</p>
+    <h1 id="name">Yashashvi Dethe</h1>
+    <img id="photo" src="IMG20231019204337.jpg" alt="Yashashvi Dethe">
+    <p id="role">Data Engineer</p>
+    <p id="welcome">Welcome to my professional portfolio website.</p>
   </header>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Cloud Platforms: GCP, Snowflake, AWS, Azure</li>
-      <li>ETL & Data Pipelines: Apache Airflow, Pentaho</li>
-      <li>Databases: PostgreSQL, MySQL, Snowflake</li>
-      <li>Programming: SQL, Python, PySpark, Scala, Java</li>
-      <li>DevOps & Tools: Git, JIRA</li>
-      <li>Strong Problem-Solving & Analytical Skills</li>
-    </ul>
-  </section>
+  <script>
+    window.onload = function () {
+      const seq = [
+        document.getElementById('name'),
+        document.getElementById('photo'),
+        document.getElementById('role'),
+        document.getElementById('welcome')
+      ];
 
-  <section>
-    <h2>Projects</h2>
-    <h3>GCP BigQuery Analytics Dashboard</h3>
-    <p>Designed and deployed a real-time analytics dashboard leveraging Google BigQuery and Google Data Studio...</p>
-    <!-- Add more projects as needed -->
-  </section>
-
-  <section>
-    <h2>Resume</h2>
-    <a href="Resume_yashashvi_dethe.pdf" class="button" download>Download My Resume</a>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:yashashvidethe3108@gmail.com">yashashvidethe3108@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">linkedin.com/in/yashashvi-dethe-0927761a8</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Yashashvi Dethe | Data Engineer Portfolio
-  </footer>
+      seq.forEach((el, i) => {
+        setTimeout(() => el.classList.add('show'), i * 600);
+      });
+    };
+  </script>
 
 </body>
 </html>
