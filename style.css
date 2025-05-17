@@ -1,115 +1,183 @@
-body {
+/* Reset & Base Styles */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff8f0;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff7f0;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffd6a5;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeInUp 1s ease;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #ff7f50;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  max-width: 700px;
   margin: auto;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  background: #ffe8d6;
-  padding: 60px 20px;
+/* Skills */
+.skills-section {
+  padding: 2rem;
+}
+
+.skills-section h3 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f3722c;
 }
 
-.profile-img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #e29578;
+.skill-category {
+  margin-bottom: 1.5rem;
 }
 
-.intro h1 {
-  font-size: 2.2rem;
-  color: #6d6875;
+.skill-category h4 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.intro span {
-  color: #e29578;
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
-.intro h2 {
-  margin-top: 5px;
-  font-weight: 400;
-  color: #7c6f64;
+.skill-item {
+  background: #ffe5b4;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-.skills ul {
-  list-style: none;
-  padding: 0;
-  columns: 2;
-  line-height: 1.8;
+/* Work & Certificates */
+.section-scroll {
+  padding: 2rem 1rem;
 }
 
-.horizontal-scroll .scroll-container {
+.section-scroll h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #f3722c;
+}
+
+.scroll-container {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
 }
 
-.block, .cert-block {
-  flex: 0 0 300px;
-  background: #fef6e4;
-  border: 2px solid #e0a899;
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #ffb997;
+  border-radius: 10px;
+}
+
+.block-card {
+  flex: 0 0 auto;
+  min-width: 280px;
+  background: #fff0e1;
   border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  min-height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.block:hover, .cert-block:hover {
-  background: #ffe5d9;
-  transform: scale(1.02);
-  transition: 0.3s;
+.block-card:hover {
+  transform: translateY(-5px);
 }
 
-.cert-block img {
+.block-card img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
-.guidance {
-  margin-top: 20px;
-  text-align: center;
+.block-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.block-card p {
   font-size: 0.95rem;
 }
 
-.contact p {
-  line-height: 1.6;
-}
-
-.contact a {
-  color: #e76f51;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.resume {
+/* About */
+.about {
   text-align: center;
+  padding: 2rem 1rem;
 }
 
-.resume-button {
-  background: #e29578;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
+.about h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f3722c;
+}
+
+.about-icons a {
+  margin: 0 1rem;
+  color: #ff7f50;
+  font-size: 1.5rem;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
 }
 
-.resume-button:hover {
-  background: #c77d6b;
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background: #fff0e1;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
