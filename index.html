@@ -1,87 +1,71 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yashashvi Dethe | Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" class="profile-pic" />
-    <h1 class="animated-text">Welcome</h1>
-    <h2 class="animated-text">I'm Yashashvi Dethe</h2>
-    <p class="tagline">Crafting scalable data pipelines and deploying ML models on cloud platforms</p>
-  </header>  <section class="skills">
-    <h2>Skill Set</h2>
-    <div class="skill-category">
-      <h3>Cloud Platforms</h3>
-      <ul>
-        <li>Google Cloud Platform (BigQuery, Dataflow, Pub/Sub, Cloud Functions, Vertex AI)</li>
-        <li>AWS (Lambda, Glue, S3, Athena, SageMaker, CloudWatch)</li>
-        <li>Azure</li>
-        <li>Oracle Cloud</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>DevOps & Tools</h3>
-      <ul>
-        <li>Git, GitHub, Bitbucket</li>
-        <li>JIRA (Agile Boards)</li>
-        <li>CI/CD with CodePipeline, Jenkins</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>ETL & Migration</h3>
-      <ul>
-        <li>Apache Airflow, Data Fusion, Pentaho</li>
-        <li>On-premise to Cloud Migration</li>
-        <li>Data Warehouse Modernization</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>Databases</h3>
-      <ul>
-        <li>PostgreSQL, MySQL, Oracle DB</li>
-        <li>Snowflake</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>Programming</h3>
-      <ul>
-        <li>Python, SQL, PySpark, Scala, Java</li>
-      </ul>
-    </div>
-  </section>  <section class="work">
+  <header>
+    <h1 class="animate-text">Welcome, I'm</h1>
+    <h2 class="animate-text highlight">Yashashvi Dethe</h2>
+    <h3>Data Engineer</h3>
+    <p>Crafting scalable data pipelines and deploying ML models on cloud platforms.</p>
+    <img src="IMG20231019204337.jpg" alt="Yashashvi's Photo" class="profile-img" />
+  </header>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Cloud Platforms:</strong> GCP, AWS, Oracle Cloud</li>
+      <li><strong>DevOps:</strong> CI/CD, Docker, Kubernetes, Git, GitHub, Terraform</li>
+      <li><strong>Migration:</strong> Snowflake to BigQuery, Hadoop to GCP, Oracle to Postgres</li>
+      <li><strong>Tools:</strong> Jira, Confluence, Airflow, Dataflow, BigQuery, Vertex AI</li>
+      <li><strong>Databases:</strong> PostgreSQL, MySQL, Oracle DB</li>
+    </ul>
+  </section>
+
+  <section class="projects">
     <h2>My Work</h2>
     <div class="scroll-container">
-      <div class="card">GCP BigQuery Analytics Dashboard</div>
-      <div class="card">AWS Serverless Data Pipeline</div>
-      <div class="card">GCP Vertex AI Forecasting</div>
-      <div class="card">SageMaker ML Deployment</div>
-      <div class="card">GCP Dataflow Streaming Pipeline</div>
-    </div>
-  </section>  <section class="certifications">
-    <h2>Certifications</h2>
-    <div class="scroll-container">
-      <div class="card"><img src="AWS_certifiedcloud_practitioner.png" alt="AWS" /><p>AWS Cloud Practitioner</p></div>
-      <div class="card"><img src="Professional_Data_Enginee.png" alt="GCP Data Engineer" /><p>GCP Professional Data Engineer</p></div>
-      <div class="card"><img src="Professional_cloud_database_engineer.png" alt="GCP DB Engineer" /><p>GCP Cloud DB Engineer</p></div>
-      <div class="card"><img src="Snowpro_core_Certified.png" alt="SnowPro" /><p>SnowPro Core Certified</p></div>
-    </div>
-  </section>  <section class="resume">
-    <a href="Resume_yashashvi_dethe.pdf" download class="btn">Download Resume</a>
-  </section>  <section class="contact">
-    <h2>About Me</h2>
-    <p>Let’s connect and collaborate!</p>
-    <div class="links">
-      <a href="mailto:yashashvidethe3108@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">LinkedIn</a>
-      <a href="https://github.com/" target="_blank">GitHub</a>
+      <div class="card" onclick="showDetails('project1')">BigQuery Dashboard</div>
+      <div class="card" onclick="showDetails('project2')">AWS Data Pipeline</div>
+      <div class="card" onclick="showDetails('project3')">Vertex AI Forecasting</div>
+      <div class="card" onclick="showDetails('project4')">SageMaker ML Model</div>
+      <div class="card" onclick="showDetails('project5')">Dataflow Streaming</div>
     </div>
   </section>
+
+  <section class="certifications">
+    <h2>Certifications</h2>
+    <div class="scroll-container">
+      <img src="AWS_certifiedcloud_practitioner.png" alt="AWS Cloud Practitioner" />
+      <img src="Professional_Data_Enginee.png" alt="GCP Data Engineer" />
+      <img src="Professional_cloud_database_engineer.png" alt="GCP DB Engineer" />
+      <img src="Snowpro_core_Certified.png" alt="SnowPro Core" />
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Connect With Me</h2>
+    <p>Email: <a href="mailto:yashashvidethe@gmail.com">yashashvidethe@gmail.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/yashashvidethe" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/yashashvi-dethe" target="_blank">GitHub</a> |
+      <a href="https://medium.com/@yashashvidethe" target="_blank">Medium</a>
+    </p>
+    <a href="Resume_yashashvi_dethe.pdf" target="_blank" class="resume-btn">View Resume</a>
+  </section>
+
+  <!-- Modal for project details -->
+  <div id="project-details" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeDetails()">×</span>
+      <div id="project-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
