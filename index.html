@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yashashvi Dethe | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashashvi Dethe | Data Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Yashashvi Dethe</h1>
-    <p>Data Engineer | India</p>
+  <header class="hero">
+    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" class="profile-pic">
+    <div class="intro">
+      <h1>Welcome, I'm Yashashvi Dethe</h1>
+      <h2>Data Engineer</h2>
+      <p>Crafting scalable data pipelines and deploying machine learning models on cloud platforms. Let’s build data-driven solutions together.</p>
+    </div>
   </header>
 
-  <section class="projects-section">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-      <!-- Project Card 1 -->
-      <div class="project-card" onclick="showDetails('project1')">
+  <section class="scroll-blocks">
+    <h2>My Work</h2>
+    <div class="scroll-container">
+      <div class="card work-card">
         <h3>GCP BigQuery Analytics Dashboard</h3>
-        <p>Real-time dashboard using BigQuery</p>
+        <p>Real-time dashboard with BigQuery, Data Studio & GCS. Processed 10M+ rows for sales insights.</p>
       </div>
-
-      <!-- Project Card 2 -->
-      <div class="project-card" onclick="showDetails('project2')">
-        <h3>AWS Serverless Data Pipeline</h3>
-        <p>ETL pipeline with Lambda & Glue</p>
+      <div class="card work-card">
+        <h3>AWS Serverless ETL</h3>
+        <p>Automated ETL using Lambda, S3, Glue, Athena with 60% faster processing.</p>
       </div>
-
-      <!-- Project Card 3 -->
-      <div class="project-card" onclick="showDetails('project3')">
-        <h3>GCP Vertex AI Forecasting Model</h3>
-        <p>Inventory demand prediction</p>
+      <div class="card work-card">
+        <h3>Vertex AI Forecasting</h3>
+        <p>Deployed time-series demand forecast model via REST API, improving accuracy by 15%.</p>
       </div>
-
-      <!-- Add more project cards as needed -->
+      <div class="card work-card">
+        <h3>Dataflow Streaming</h3>
+        <p>Built real-time pipeline on Dataflow using Pub/Sub, Beam, BigQuery. Enabled instant dashboards.</p>
+      </div>
     </div>
   </section>
 
-  <section class="project-details" id="project-details">
-    <button onclick="closeDetails()">Close</button>
-    <div id="project-content"></div>
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>GCP, AWS, Azure, Snowflake</li>
+      <li>Airflow, Dataflow, Pentaho</li>
+      <li>Python, PySpark, Java, Scala</li>
+      <li>PostgreSQL, MySQL, BigQuery</li>
+      <li>Git, JIRA</li>
+    </ul>
   </section>
 
-  <script src="script.js"></script>
+  <section class="collaboration">
+    <h2>Collaboration & Profiles</h2>
+    <div class="scroll-container">
+      <div class="card">
+        <h3>GitHub</h3>
+        <a href="https://github.com/yashashvidethe" target="_blank">github.com/yashashvidethe</a>
+      </div>
+      <div class="card">
+        <h3>Medium Articles</h3>
+        <a href="https://medium.com/@yashashvidethe" target="_blank">medium.com/@yashashvidethe</a>
+      </div>
+      <div class="card">
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">linkedin.com/in/yashashvi-dethe</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications">
+    <h2>Certifications</h2>
+    <div class="scroll-container">
+      <div class="card cert-card">
+        <img src="cert1.jpg" alt="Certificate 1">
+        <h3>GCP Data Engineer</h3>
+        <p>Full guide to crack this certification: courses, practice, and tips. <br><a href="#">Read Guide</a></p>
+      </div>
+      <div class="card cert-card">
+        <img src="cert2.jpg" alt="Certificate 2">
+        <h3>AWS Machine Learning</h3>
+        <p>Prepare with labs, theory, and real examples. <br><a href="#">View Details</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am Yashashvi Dethe, a Data Engineer with a passion for building efficient and scalable systems in the cloud. I'm always open to collaboration and sharing insights with the community.</p>
+    <div class="contact-icons">
+      <a href="mailto:yashashvidethe3108@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://medium.com/@yashashvidethe" target="_blank"><i class="fab fa-medium"></i></a>
+    </div>
+  </section>
+
 </body>
 </html>
