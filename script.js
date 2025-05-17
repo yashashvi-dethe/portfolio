@@ -1,3 +1,25 @@
+// Smooth scroll for section links (future-proofing for nav)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute('href'));
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Enable horizontal scroll with mouse wheel
+document.querySelectorAll('.scroll-container').forEach(container => {
+  container.addEventListener('wheel', function (e) {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    }
+  });
+});
+
+// Project data for pop-up display
 const projectData = {
   project1: {
     title: "GCP BigQuery Analytics Dashboard",
@@ -19,9 +41,24 @@ const projectData = {
       Trained a time-series forecasting model on Vertex AI using TensorFlow, predicting demand patterns. 
       Deployed the model via Cloud Functions and integrated it into dashboards.
     `
+  },
+  project4: {
+    title: "AWS SageMaker ML Deployment",
+    description: `
+      Built a classification model using AWS SageMaker, automating hyperparameter tuning and model evaluation. 
+      Deployed using API Gateway and Lambda for real-time inference.
+    `
+  },
+  project5: {
+    title: "GCP Dataflow Streaming Pipeline",
+    description: `
+      Constructed a real-time streaming pipeline using Apache Beam on Google Dataflow. 
+      Ingested data from Pub/Sub, transformed and stored outputs in BigQuery and Cloud Storage.
+    `
   }
 };
 
+// Show project details in a modal/popup
 function showDetails(id) {
   const details = projectData[id];
   if (details) {
@@ -33,6 +70,7 @@ function showDetails(id) {
   }
 }
 
+// Close the modal/popup
 function closeDetails() {
   document.getElementById("project-details").style.display = "none";
 }
