@@ -3,62 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yashashvi Dethe | Data Engineer</title>
+  <title>Yashashvi Dethe - Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1 class="animate-text">Welcome, I'm</h1>
-    <h2 class="animate-text highlight">Yashashvi Dethe</h2>
-    <h3>Data Engineer</h3>
-    <p>Crafting scalable data pipelines and deploying ML models on cloud platforms.</p>
-    <img src="IMG20231019204337.jpg" alt="Yashashvi's Photo" class="profile-img" />
+
+  <!-- Hero -->
+  <header class="hero">
+    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" class="profile-img" />
+    <div class="intro">
+      <h1>Welcome</h1>
+      <h2>I'm <span>Yashashvi Dethe</span></h2>
+      <h3>Data Engineer</h3>
+      <p>Crafting scalable pipelines and deploying ML models using GCP, AWS & Snowflake.</p>
+    </div>
   </header>
 
+  <!-- Skills -->
   <section class="skills">
     <h2>Skills</h2>
-    <ul>
-      <li><strong>Cloud Platforms:</strong> GCP, AWS, Oracle Cloud</li>
-      <li><strong>DevOps:</strong> CI/CD, Docker, Kubernetes, Git, GitHub, Terraform</li>
-      <li><strong>Migration:</strong> Snowflake to BigQuery, Hadoop to GCP, Oracle to Postgres</li>
-      <li><strong>Tools:</strong> Jira, Confluence, Airflow, Dataflow, BigQuery, Vertex AI</li>
-      <li><strong>Databases:</strong> PostgreSQL, MySQL, Oracle DB</li>
-    </ul>
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h4>Cloud Platforms</h4>
+        <ul>
+          <li>GCP (BigQuery, Dataflow, Pub/Sub, Vertex AI)</li>
+          <li>AWS (Lambda, Glue, S3, SageMaker)</li>
+          <li>Azure, Oracle Cloud</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>DevOps & Tools</h4>
+        <ul>
+          <li>Git, GitHub, Bitbucket</li>
+          <li>CI/CD, Docker, Terraform</li>
+          <li>JIRA, Confluence</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>ETL & Migration</h4>
+        <ul>
+          <li>Airflow, Data Fusion, Pentaho</li>
+          <li>Snowflake → BigQuery</li>
+          <li>On-prem → Cloud</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Databases & Languages</h4>
+        <ul>
+          <li>PostgreSQL, MySQL, Oracle</li>
+          <li>Python, SQL, Java, Scala, PySpark</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section class="projects">
+  <!-- Work -->
+  <section class="scroll-section">
     <h2>My Work</h2>
     <div class="scroll-container">
       <div class="card" onclick="showDetails('project1')">BigQuery Dashboard</div>
-      <div class="card" onclick="showDetails('project2')">AWS Data Pipeline</div>
+      <div class="card" onclick="showDetails('project2')">AWS Serverless ETL</div>
       <div class="card" onclick="showDetails('project3')">Vertex AI Forecasting</div>
-      <div class="card" onclick="showDetails('project4')">SageMaker ML Model</div>
+      <div class="card" onclick="showDetails('project4')">SageMaker Deployment</div>
       <div class="card" onclick="showDetails('project5')">Dataflow Streaming</div>
     </div>
   </section>
 
-  <section class="certifications">
+  <!-- Certifications -->
+  <section class="scroll-section">
     <h2>Certifications</h2>
-    <div class="scroll-container">
-      <img src="AWS_certifiedcloud_practitioner.png" alt="AWS Cloud Practitioner" />
-      <img src="Professional_Data_Enginee.png" alt="GCP Data Engineer" />
+    <div class="scroll-container certs">
+      <img src="AWS_certifiedcloud_practitioner.png" alt="AWS CCP" />
+      <img src="Snowpro_core_Certified.png" alt="Snowflake Core" />
+      <img src="Professional_Data_Enginee.png" alt="GCP PDE" />
       <img src="Professional_cloud_database_engineer.png" alt="GCP DB Engineer" />
-      <img src="Snowpro_core_Certified.png" alt="SnowPro Core" />
+    </div>
+    <div class="guidance">
+      <p>Want to get certified? Check <a href="https://cloud.google.com/certification" target="_blank">GCP</a> or <a href="https://aws.amazon.com/certification/" target="_blank">AWS</a> certifications.</p>
     </div>
   </section>
 
-  <section class="contact">
-    <h2>Connect With Me</h2>
-    <p>Email: <a href="mailto:yashashvidethe@gmail.com">yashashvidethe@gmail.com</a></p>
+  <!-- About -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Data Engineer with 1.8 years of experience at Quantiphi building secure, scalable, cloud-native data systems.</p>
     <p>
-      <a href="https://linkedin.com/in/yashashvidethe" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/yashashvi-dethe" target="_blank">GitHub</a> |
-      <a href="https://medium.com/@yashashvidethe" target="_blank">Medium</a>
+      <a href="mailto:yashashvidethe3108@gmail.com">Email</a> |
+      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/yashashvi3108" target="_blank">GitHub</a>
     </p>
-    <a href="Resume_yashashvi_dethe.pdf" target="_blank" class="resume-btn">View Resume</a>
   </section>
 
-  <!-- Modal for project details -->
+  <!-- Resume -->
+  <section class="resume">
+    <a href="Resume_yashashvi_dethe.pdf" download class="resume-button">📄 Download Resume</a>
+  </section>
+
+  <!-- Project Modal (optional) -->
   <div id="project-details" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeDetails()">×</span>
