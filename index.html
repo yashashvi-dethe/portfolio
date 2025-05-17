@@ -2,209 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yashashvi Dethe | Data Engineer Portfolio</title>
-  <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f2f5;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    a {
-      color: #0077b6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Header */
-    header {
-      background: url('https://www.montecarlodata.com/wp-content/uploads/2023/08/basic-steps-for-data-engineering-workflow.webp') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      margin-bottom: 40px;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-      z-index: 0;
-    }
-    header * {
-      position: relative;
-      z-index: 1;
-    }
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.6);
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.2em;
-      font-weight: 700;
-    }
-    header p.role {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 0 0 15px 0;
-      letter-spacing: 1.2px;
-    }
-    header p.welcome {
-      font-size: 1.1rem;
-      font-weight: 400;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    /* Sections */
-    section {
-      background: white;
-      padding: 25px 30px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-      margin-bottom: 30px;
-    }
-    section h2 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      color: #0077b6;
-      border-bottom: 3px solid #0077b6;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
-    }
-    section h3 {
-      margin-top: 0;
-      color: #023e8a;
-      font-weight: 600;
-    }
-    section p.date {
-      font-style: italic;
-      color: #555;
-      margin-top: 3px;
-      margin-bottom: 12px;
-    }
-
-    /* Lists */
-    ul {
-      padding-left: 1.2rem;
-      margin-top: 0;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    /* Resume button */
-    .button {
-      display: inline-block;
-      background-color: #0077b6;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 25px;
-      font-weight: 600;
-      text-align: center;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-      border: none;
-      margin-top: 10px;
-      text-decoration: none;
-    }
-    .button:hover {
-      background-color: #023e8a;
-    }
-
-    /* Contact links styling */
-    #contact p {
-      margin: 8px 0;
-      font-size: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yashashvi Dethe | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" />
     <h1>Yashashvi Dethe</h1>
-    <p class="role">Data Engineer</p>
-    <p class="welcome">Welcome to my professional portfolio website.</p>
+    <p>Data Engineer | India</p>
   </header>
 
-  <div class="container">
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Cloud Platforms: GCP, Snowflake, AWS, Azure</li>
-        <li>ETL & Data Pipelines: Apache Airflow, Pentaho</li>
-        <li>Databases: PostgreSQL, MySQL, Snowflake</li>
-        <li>Programming: SQL, Python, PySpark, Scala, Java</li>
-        <li>DevOps & Tools: Git, JIRA</li>
-        <li>Strong Problem-Solving & Analytical Skills</li>
-      </ul>
-    </section>
+  <section class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <div class="project-card" onclick="showDetails('project1')">
+        <h3>GCP BigQuery Analytics Dashboard</h3>
+        <p>Real-time dashboard using BigQuery</p>
+      </div>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <h3>Data Engineer | Quantiphi Analytics Solutions, Mumbai</h3>
-      <p class="date">Nov 2022 - Present</p>
-      <ul>
-        <li>Designed scalable data pipelines on GCP using BigQuery, Apache Airflow, and real-time processing tools.</li>
-        <li>Led data warehouse migration projects and optimized storage/query performance for analytics use-cases.</li>
-      </ul>
-    </section>
+      <!-- Project Card 2 -->
+      <div class="project-card" onclick="showDetails('project2')">
+        <h3>AWS Serverless Data Pipeline</h3>
+        <p>ETL pipeline with Lambda & Glue</p>
+      </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
+      <!-- Project Card 3 -->
+      <div class="project-card" onclick="showDetails('project3')">
+        <h3>GCP Vertex AI Forecasting Model</h3>
+        <p>Inventory demand prediction</p>
+      </div>
 
-      <h3>GCP BigQuery Analytics Dashboard</h3>
-      <p>Designed and deployed a real-time analytics dashboard leveraging Google BigQuery and Google Data Studio. Processed datasets exceeding 10 million rows, creating automated insights for marketing and sales departments. Optimized SQL queries for performance and integrated with Google Cloud Storage for scalable data ingestion pipelines.</p>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
 
-      <h3>AWS Serverless Data Pipeline</h3>
-      <p>Developed a fully automated ETL pipeline utilizing AWS Lambda, S3, Glue, and Athena. Streamlined the ingestion and transformation of transactional data, reducing processing time by 60%. Implemented robust logging and monitoring with AWS CloudWatch, ensuring reliability and fault tolerance.</p>
+  <section class="project-details" id="project-details">
+    <button onclick="closeDetails()">Close</button>
+    <div id="project-content"></div>
+  </section>
 
-      <h3>GCP Vertex AI Forecasting Model</h3>
-      <p>Trained a time-series forecasting model on Vertex AI using TensorFlow, predicting demand patterns for inventory management. Deployed the model via Google Cloud Functions and exposed REST APIs for seamless integration with business dashboards. Achieved a 15% improvement in forecasting accuracy compared to legacy models.</p>
-
-      <h3>AWS SageMaker ML Deployment</h3>
-      <p>Built a classification model using AWS SageMaker, automating hyperparameter tuning and model evaluation. Deployed the model through API Gateway and Lambda for real-time inference. Implemented CI/CD pipelines with AWS CodePipeline for streamlined model updates and monitoring.</p>
-
-      <h3>GCP Dataflow Streaming Pipeline</h3>
-      <p>Constructed a real-time streaming pipeline using Apache Beam on Google Dataflow. Ingested data from Pub/Sub, performed transformations, and stored outputs in BigQuery and Cloud Storage. Enabled real-time dashboards and alerts, improving incident response time by 40%.</p>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <a href="Resume_yashashvi_dethe.pdf" class="button" download>Download My Resume</a>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yashashvidethe3108@gmail.com">yashashvidethe3108@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank" rel="noopener noreferrer">linkedin.com/in/yashashvi-dethe-0927761a8</a></p>
-    </section>
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
