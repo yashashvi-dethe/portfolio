@@ -2,44 +2,41 @@ const projectData = {
   project1: {
     title: "GCP BigQuery Analytics Dashboard",
     description: `
-      Designed and deployed a real-time analytics dashboard using Google BigQuery and Google Data Studio.
-      Processed over 10 million records daily, enabling actionable insights for the marketing and sales teams.
-      Technologies: BigQuery, Data Studio, Cloud Storage.
+      Designed and deployed a real-time analytics dashboard using Google BigQuery and Google Data Studio.<br/>
+      Processed over 10 million records daily, enabling actionable insights for the marketing and sales teams.<br/>
+      <strong>Technologies:</strong> BigQuery, Data Studio, Cloud Storage.
     `
   },
   project2: {
     title: "AWS Serverless Data Pipeline",
     description: `
-      Architected and implemented an automated serverless ETL pipeline.
-      Components included AWS Lambda (triggered on file upload), Glue for transformation, and Athena for querying results.
-      Outcome: Reduced data latency by 60%, improved data quality with schema validation.
-      Technologies: Lambda, S3, Glue, Athena, CloudWatch.
+      Architected and implemented an automated serverless ETL pipeline.<br/>
+      Reduced data latency by 60%, improved data quality with schema validation.<br/>
+      <strong>Technologies:</strong> Lambda, S3, Glue, Athena, CloudWatch.
     `
   },
   project3: {
     title: "Vertex AI Forecasting Model",
     description: `
-      Built and deployed a demand forecasting model using TensorFlow and Vertex AI.
-      Integrated Cloud Functions for scheduled retraining and real-time prediction.
-      Achieved 93% accuracy on test set using LSTM architecture.
-      Technologies: Vertex AI, TensorFlow, Cloud Functions, GCS.
+      Built and deployed a demand forecasting model using TensorFlow and Vertex AI.<br/>
+      Achieved 93% accuracy on test set using LSTM architecture.<br/>
+      <strong>Technologies:</strong> Vertex AI, TensorFlow, Cloud Functions.
     `
   },
   project4: {
     title: "SageMaker ML Deployment",
     description: `
-      Deployed a text classification model on SageMaker using real-time endpoints.
-      Integrated CI/CD using AWS CodePipeline, enabled retraining and automated model versioning.
-      Technologies: SageMaker, CodePipeline, Lambda, CloudFormation.
+      Deployed a text classification model on SageMaker using real-time endpoints.<br/>
+      Integrated CI/CD using AWS CodePipeline, enabled retraining and model versioning.<br/>
+      <strong>Technologies:</strong> SageMaker, CodePipeline, Lambda.
     `
   },
   project5: {
     title: "GCP Dataflow Streaming Pipeline",
     description: `
-      Developed a streaming analytics pipeline using Apache Beam and Google Cloud Dataflow.
-      Data ingested via Pub/Sub, processed in real-time, and stored in BigQuery.
-      Alerts and monitoring set up via Stackdriver for anomaly detection.
-      Technologies: Dataflow, Apache Beam, Pub/Sub, BigQuery, Stackdriver.
+      Developed a real-time streaming analytics pipeline using Apache Beam on GCP Dataflow.<br/>
+      Alerts and monitoring were configured for anomaly detection.<br/>
+      <strong>Technologies:</strong> Dataflow, Pub/Sub, BigQuery, Stackdriver.
     `
   }
 };
@@ -47,19 +44,45 @@ const projectData = {
 function showDetails(id) {
   const details = projectData[id];
   if (details) {
-    document.getElementById("project-content").innerHTML = `
+    const popup = document.getElementById("project-details");
+    const content = document.getElementById("project-content");
+
+    content.innerHTML = `
       <h3>${details.title}</h3>
-      <p>${details.description.replace(/\\n/g, '<br/>')}</p>
+      <p>${details.description}</p>
     `;
-    document.getElementById("project-details").style.display = "flex";
+
+    popup.classList.add("active");
+    popup.style.display = "flex";
+
+    setTimeout(() => popup.classList.add("visible"), 10); // animation
   }
 }
 
 function closeDetails() {
-  document.getElementById("project-details").style.display = "none";
+  const popup = document.getElementById("project-details");
+  popup.classList.remove("visible");
+  setTimeout(() => {
+    popup.style.display = "none";
+    popup.classList.remove("active");
+  }, 200); // match transition duration
 }
 
-// Enable horizontal scroll on mouse wheel
+// Close popup with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeDetails();
+  }
+});
+
+// Close popup on outside click
+document.getElementById("project-details").addEventListener("click", (e) => {
+  if (e.target.id === "project-details") {
+    closeDetails();
+  }
+});
+
+// Horizontal scroll support
 document.querySelectorAll('.scroll-container').forEach(container => {
   container.addEventListener('wheel', function (e) {
     if (e.deltaY !== 0) {
