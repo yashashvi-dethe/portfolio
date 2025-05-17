@@ -15,7 +15,8 @@
     <div class="intro">
       <h1>Welcome, I'm <span>Yashashvi Dethe</span></h1>
       <h2>Data Engineer</h2>
-      </div>
+      <p>Crafting scalable data pipelines and deploying machine learning models on cloud platforms. Let’s build data-driven solutions together.</p>
+    </div>
   </section>
 
   <!-- Skills -->
@@ -34,28 +35,34 @@
   <section class="section horizontal-scroll">
     <h2>My Work</h2>
     <div class="scroll-container">
-      <div class="block">
+      <div class="block" onclick="showDetails('project1')">
         <h3>GCP BigQuery Analytics Dashboard</h3>
         <p>Real-time dashboard using BigQuery & Data Studio.</p>
       </div>
-      <div class="block">
+      <div class="block" onclick="showDetails('project2')">
         <h3>AWS Serverless Pipeline</h3>
         <p>Lambda, S3, Glue, Athena based automated ETL.</p>
       </div>
-      <div class="block">
+      <div class="block" onclick="showDetails('project3')">
         <h3>Vertex AI Forecasting</h3>
         <p>Demand prediction with TensorFlow on Vertex AI.</p>
       </div>
-      <div class="block">
+      <div class="block" onclick="showDetails('project4')">
         <h3>SageMaker ML Deployment</h3>
         <p>CI/CD enabled classification model on SageMaker.</p>
       </div>
-      <div class="block">
+      <div class="block" onclick="showDetails('project5')">
         <h3>Streaming on Dataflow</h3>
         <p>Apache Beam on Dataflow with Pub/Sub ingestion.</p>
       </div>
     </div>
   </section>
+
+  <!-- Project Details Popup -->
+  <div id="project-details">
+    <button onclick="closeDetails()">Close ✖</button>
+    <div id="project-content"></div>
+  </div>
 
   <!-- Certification Section -->
   <section class="section horizontal-scroll">
