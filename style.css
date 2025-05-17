@@ -1,99 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yashashvi Dethe | Data Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header class="hero">
-    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" class="profile-pic">
-    <div class="intro">
-      <h1>Welcome, I'm Yashashvi Dethe</h1>
-      <h2>Data Engineer</h2>
-      <p>Crafting scalable data pipelines and deploying machine learning models on cloud platforms. Let’s build data-driven solutions together.</p>
-    </div>
-  </header>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f0;
+  color: #333;
+}
 
-  <section class="scroll-blocks">
-    <h2>My Work</h2>
-    <div class="scroll-container">
-      <div class="card work-card">
-        <h3>GCP BigQuery Analytics Dashboard</h3>
-        <p>Real-time dashboard with BigQuery, Data Studio & GCS. Processed 10M+ rows for sales insights.</p>
-      </div>
-      <div class="card work-card">
-        <h3>AWS Serverless ETL</h3>
-        <p>Automated ETL using Lambda, S3, Glue, Athena with 60% faster processing.</p>
-      </div>
-      <div class="card work-card">
-        <h3>Vertex AI Forecasting</h3>
-        <p>Deployed time-series demand forecast model via REST API, improving accuracy by 15%.</p>
-      </div>
-      <div class="card work-card">
-        <h3>Dataflow Streaming</h3>
-        <p>Built real-time pipeline on Dataflow using Pub/Sub, Beam, BigQuery. Enabled instant dashboards.</p>
-      </div>
-    </div>
-  </section>
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>GCP, AWS, Azure, Snowflake</li>
-      <li>Airflow, Dataflow, Pentaho</li>
-      <li>Python, PySpark, Java, Scala</li>
-      <li>PostgreSQL, MySQL, BigQuery</li>
-      <li>Git, JIRA</li>
-    </ul>
-  </section>
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: #ffe8d6;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  <section class="collaboration">
-    <h2>Collaboration & Profiles</h2>
-    <div class="scroll-container">
-      <div class="card">
-        <h3>GitHub</h3>
-        <a href="https://github.com/yashashvidethe" target="_blank">github.com/yashashvidethe</a>
-      </div>
-      <div class="card">
-        <h3>Medium Articles</h3>
-        <a href="https://medium.com/@yashashvidethe" target="_blank">medium.com/@yashashvidethe</a>
-      </div>
-      <div class="card">
-        <h3>LinkedIn</h3>
-        <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">linkedin.com/in/yashashvi-dethe</a>
-      </div>
-    </div>
-  </section>
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e29578;
+}
 
-  <section class="certifications">
-    <h2>Certifications</h2>
-    <div class="scroll-container">
-      <div class="card cert-card">
-        <img src="cert1.jpg" alt="Certificate 1">
-        <h3>GCP Data Engineer</h3>
-        <p>Full guide to crack this certification: courses, practice, and tips. <br><a href="#">Read Guide</a></p>
-      </div>
-      <div class="card cert-card">
-        <img src="cert2.jpg" alt="Certificate 2">
-        <h3>AWS Machine Learning</h3>
-        <p>Prepare with labs, theory, and real examples. <br><a href="#">View Details</a></p>
-      </div>
-    </div>
-  </section>
+.intro h1 {
+  font-size: 2.2rem;
+  color: #6d6875;
+}
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I am Yashashvi Dethe, a Data Engineer with a passion for building efficient and scalable systems in the cloud. I'm always open to collaboration and sharing insights with the community.</p>
-    <div class="contact-icons">
-      <a href="mailto:yashashvidethe3108@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://medium.com/@yashashvidethe" target="_blank"><i class="fab fa-medium"></i></a>
-    </div>
-  </section>
+.intro span {
+  color: #e29578;
+}
 
-</body>
-</html>
+.intro h2 {
+  margin-top: 5px;
+  font-weight: 400;
+  color: #7c6f64;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  line-height: 1.8;
+}
+
+.horizontal-scroll .scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.block, .cert-block {
+  flex: 0 0 300px;
+  background: #fef6e4;
+  border: 2px solid #e0a899;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-height: 180px;
+}
+
+.block:hover, .cert-block:hover {
+  background: #ffe5d9;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.cert-block img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.guidance {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.contact p {
+  line-height: 1.6;
+}
+
+.contact a {
+  color: #e76f51;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resume {
+  text-align: center;
+}
+
+.resume-button {
+  background: #e29578;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.resume-button:hover {
+  background: #c77d6b;
+}
