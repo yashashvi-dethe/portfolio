@@ -11,12 +11,12 @@ section {
   max-width: 1000px;
   margin: auto;
 }
-
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
   background: #ffe8d6;
   padding: 60px 20px;
   text-align: center;
