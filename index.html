@@ -3,111 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Yashashvi Dethe, Data Engineer skilled in GCP, AWS, Python, BigQuery, and more." />
   <title>Yashashvi Dethe - Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="IMG20231019204337.jpg" alt="Portrait of Yashashvi Dethe" class="profile-img" />
+  <!-- Hero -->
+  <header class="hero">
+    <img src="IMG20231019204337.jpg" alt="Yashashvi Dethe" class="profile-img" />
     <div class="intro">
-      <h1>Welcome, I'm <span>Yashashvi Dethe</span></h1>
-      <h2>Data Engineer</h2>
-      <p>Crafting scalable data pipelines and deploying machine learning models on cloud platforms. Let’s build data-driven solutions together.</p>
+      <h1>Welcome</h1>
+      <h2>I'm <span>Yashashvi Dethe</span></h2>
+      <h3>Data Engineer</h3>
+      <p>Crafting scalable pipelines and deploying ML models using GCP, AWS & Snowflake.</p>
     </div>
-  </section>
+  </header>
 
   <!-- Skills -->
-  <section class="section skills">
+  <section class="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>GCP, AWS, Azure, Snowflake</li>
-      <li>Airflow, Pentaho</li>
-      <li>PostgreSQL, MySQL, Snowflake</li>
-      <li>SQL, Python, Scala, PySpark, Java</li>
-      <li>Git, JIRA</li>
-    </ul>
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h4>Cloud Platforms</h4>
+        <ul>
+          <li>GCP (BigQuery, Dataflow, Pub/Sub, Vertex AI)</li>
+          <li>AWS (Lambda, Glue, S3, SageMaker)</li>
+          <li>Azure, Oracle Cloud</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>DevOps & Tools</h4>
+        <ul>
+          <li>Git, GitHub, Bitbucket</li>
+          <li>CI/CD, Docker, Terraform</li>
+          <li>JIRA, Confluence</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>ETL & Migration</h4>
+        <ul>
+          <li>Airflow, Data Fusion, Pentaho</li>
+          <li>Snowflake → BigQuery</li>
+          <li>On-prem → Cloud</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Databases & Languages</h4>
+        <ul>
+          <li>PostgreSQL, MySQL, Oracle</li>
+          <li>Python, SQL, Java, Scala, PySpark</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <!-- Work Section -->
-  <section class="section horizontal-scroll">
+  <!-- My Work -->
+  <section class="scroll-section">
     <h2>My Work</h2>
     <div class="scroll-container">
-      <div class="block" onclick="showDetails('project1')">
-        <h3>GCP BigQuery Analytics Dashboard</h3>
-        <p>Real-time dashboard using BigQuery & Data Studio.</p>
-      </div>
-      <div class="block" onclick="showDetails('project2')">
-        <h3>AWS Serverless Pipeline</h3>
-        <p>Lambda, S3, Glue, Athena based automated ETL.</p>
-      </div>
-      <div class="block" onclick="showDetails('project3')">
-        <h3>Vertex AI Forecasting</h3>
-        <p>Demand prediction with TensorFlow on Vertex AI.</p>
-      </div>
-      <div class="block" onclick="showDetails('project4')">
-        <h3>SageMaker ML Deployment</h3>
-        <p>CI/CD enabled classification model on SageMaker.</p>
-      </div>
-      <div class="block" onclick="showDetails('project5')">
-        <h3>Streaming on Dataflow</h3>
-        <p>Apache Beam on Dataflow with Pub/Sub ingestion.</p>
-      </div>
+      <div class="card" onclick="showDetails('project1')">BigQuery Dashboard</div>
+      <div class="card" onclick="showDetails('project2')">AWS Serverless ETL</div>
+      <div class="card" onclick="showDetails('project3')">Vertex AI Forecasting</div>
+      <div class="card" onclick="showDetails('project4')">SageMaker Deployment</div>
+      <div class="card" onclick="showDetails('project5')">Dataflow Streaming</div>
     </div>
   </section>
 
-  <!-- Project Details Popup -->
-  <div id="project-details">
-    <button onclick="closeDetails()">Close ✖</button>
-    <div id="project-content"></div>
-  </div>
-
-  <!-- Certification Section -->
-  <section class="section horizontal-scroll">
-    <h2>Certifications</h2>
+  <!-- Medium Articles -->
+  <section class="scroll-section">
+    <h2>Medium Articles</h2>
     <div class="scroll-container">
-      <div class="cert-block">
-        <img src="AWS_certifiedcloud_practitioner.png" alt="AWS Certified Cloud Practitioner badge" />
-        <p>AWS Certified Cloud Practitioner</p>
-      </div>
-      <div class="cert-block">
-        <img src="Snowpro_core_Certified.png" alt="Snowflake Core Certification badge" />
-        <p>SnowPro Core Certified</p>
-      </div>
-      <div class="cert-block">
-        <img src="Professional_Data_Enginee.png" alt="Google Professional Data Engineer badge" />
-        <p>Google Professional Data Engineer</p>
-      </div>
-      <div class="cert-block">
-        <img src="Professional_cloud_database_engineer.png" alt="Google Cloud Database Engineer badge" />
-        <p>Google Cloud Database Engineer</p>
-      </div>
+      <a class="card" href="https://medium.com/@yashudethe3108/real-time-vs-batch-data-processing-whats-the-difference-and-when-to-use-each-7a46bbbcef5b" target="_blank">
+        Real-time vs Batch Processing
+      </a>
+      <a class="card" href="https://medium.com/@yashudethe3108/%EF%B8%8F-how-to-build-an-end-to-end-data-pipeline-a-beginners-project-guide-0d9637e020dd" target="_blank">
+        Build an End-to-End Data Pipeline
+      </a>
+      <a class="card" href="https://medium.com/@yashudethe3108/the-ultimate-roadmap-to-becoming-a-data-engineer-in-2025-98430ebb7ee1" target="_blank">
+        Roadmap to Data Engineer 2025
+      </a>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="scroll-section">
+    <h2>Certifications</h2>
+    <div class="scroll-container certs">
+      <img src="AWS_certifiedcloud_practitioner.png" alt="AWS CCP" />
+      <img src="Snowpro_core_Certified.png" alt="Snowflake Core" />
+      <img src="Professional_Data_Enginee.png" alt="GCP PDE" />
+      <img src="Professional_cloud_database_engineer.png" alt="GCP DB Engineer" />
     </div>
     <div class="guidance">
-      <h3>Want to get certified?</h3>
-      <p>Visit <a href="https://cloud.google.com/certification" target="_blank">GCP Certifications</a> or <a href="https://aws.amazon.com/certification/" target="_blank">AWS Certifications</a></p>
+      <p>Want to get certified? Check <a href="https://cloud.google.com/certification" target="_blank">GCP</a> or <a href="https://aws.amazon.com/certification/" target="_blank">AWS</a> certifications.</p>
     </div>
   </section>
 
-  <!-- About / Contact -->
-  <section class="section contact">
+  <!-- About -->
+  <section class="about">
     <h2>About Me</h2>
-    <p>I’m a passionate and curious Data Engineer with nearly 2 years of experience at Quantiphi, where I’ve worked on building scalable, secure, and data-driven systems in the cloud.</p>
-    <p>I specialize in developing data pipelines, optimizing data storage solutions, and deploying machine learning models using cloud services like GCP, AWS, and Azure. My toolkit includes SQL, Python, PySpark, and tools like Airflow, BigQuery, and Snowflake.</p>
-    <p>I thrive in environments that encourage learning and innovation. Whether it’s creating real-time analytics dashboards, automating ETL pipelines, or solving business problems with ML, I love turning raw data into actionable insights.</p>
+    <p>Data Engineer with 1.8 years of experience at Quantiphi building secure, scalable, cloud-native data systems.</p>
     <p>
-      <a href="mailto:yashashvidethe3108@gmail.com">📧 Email</a> |
-      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">🔗 LinkedIn</a> |
-      <a href="https://github.com/yashashvi3108" target="_blank">💻 GitHub</a>
+      <a href="mailto:yashashvidethe3108@gmail.com">Email</a> |
+      <a href="https://linkedin.com/in/yashashvi-dethe-0927761a8" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/yashashvi3108" target="_blank">GitHub</a>
     </p>
   </section>
 
   <!-- Resume -->
-  <section class="section resume">
+  <section class="resume">
     <a href="Resume_yashashvi_dethe.pdf" download class="resume-button">📄 Download Resume</a>
   </section>
+
+  <!-- Project Modal -->
+  <div id="project-details" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeDetails()">×</span>
+      <div id="project-content"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
